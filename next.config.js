@@ -2,10 +2,10 @@
 const nextConfig = {
   experimental: {
     appDir: true,
-    serverComponentsExternalPackages: ['mongoose'],
+    serverComponentsExternalPackages: ["mongoose"],
   },
   images: {
-    domains: ['1h3.googleusercontent.com'],
+    domains: ['lh3.googleusercontent.com'],
   },
   webpack(config) {
     config.experiments = {
@@ -13,7 +13,7 @@ const nextConfig = {
       topLevelAwait: true,
     }
     return config
-  },
+  }
 }
 
 module.exports = nextConfig

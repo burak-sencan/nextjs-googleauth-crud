@@ -49,11 +49,11 @@ const Navbar = () => {
             </button>
             <Link href={'/profile'}>
               <Image
-                src={logo}
+                src={session?.user.image}
                 alt="logo"
                 width={48}
                 height={48}
-                className="rounded-full p-3 transition hover:bg-white/50"
+                className="rounded-full p-2 transition hover:bg-white/50"
               />
             </Link>
           </div>
@@ -80,11 +80,11 @@ const Navbar = () => {
         {session?.user ? (
           <div className="flex">
             <Image
-              src={logo}
+              src={session?.user.image}
               alt="logo"
               width={48}
               height={48}
-              className="rounded-full p-3 transition hover:bg-white/50"
+              className="rounded-full p-2 transition hover:bg-white/50"
               onClick={() => {
                 setToggleDropDown((prev) => !prev)
               }}
