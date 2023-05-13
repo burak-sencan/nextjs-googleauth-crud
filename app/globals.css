@@ -40,10 +40,30 @@
   background-blend-mode: screen;
 }
 
-@media screen and (max-width: 640px) {
-  .main {
-    padding: 0;
-  }
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(142, 8, 204, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.glassmorphism-input {
+  background: rgba(146, 0, 0, 0);
+  width: 100%;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease-in-out;
+}
+.glassmorphism-input:focus {
+  outline: none;
+  box-shadow: 0 8px 32px 0 rgba(17, 39, 134, 0.37);
+}
+.glassmorphism-input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 /* Tailwind Styles */

@@ -15,7 +15,7 @@ const Home = () => {
           You can create todos and read update and delete.
           <br /> Your todos will be saved to database
         </p>
-        <button className="w-64 rounded-sm bg-white/50 px-4 py-2 transition ease-linear hover:bg-white hover:text-purple-500 hover:shadow-lg hover:shadow-purple-400">
+        <button className="w-64 rounded-sm bg-white/80 px-4 py-2 transition ease-linear hover:bg-white hover:text-purple-500 hover:shadow-lg hover:shadow-purple-400">
           Get Started
         </button>
       </div>
