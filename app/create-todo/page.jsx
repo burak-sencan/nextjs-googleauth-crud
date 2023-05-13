@@ -1,17 +1,38 @@
 'use client'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 const CreateTodo = () => {
+  const { data: session } = useSession()
+  const router = useRouter()
   const [submitting, setSubmitting] = useState(false)
   const [todo, setTodo] = useState({
     title: '',
     todo: '',
   })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    setSubmitting(true)
+    try {
+      const response = await fetch('/api/todo/new', {
+        method: 'POST',
+        body: JSON.stringify({
+          title: todo.title,
+          todo: todo.todo,
+          userId: session?.user.id,
+        }),
+      })
+
+      if (response.ok) {
+        router.push('/')
+      }
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
