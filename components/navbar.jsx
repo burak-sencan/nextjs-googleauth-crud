@@ -20,14 +20,15 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 flex h-16 w-full items-center justify-between bg-white/10 px-8 backdrop-blur-sm">
-      <Link href={'/'}>
+      <Link href={'/'} className="purple_gradient flex items-center gap-2">
         <Image
           src={logo}
           alt="logo"
           width={48}
           height={48}
-          className="rounded-full p-3 transition hover:bg-white/50"
+          className="rounded-full p-2 transition hover:bg-purple-400/20"
         />
+        <p>Next Todo</p>
       </Link>
 
       {/* Deskotop navigation */}
@@ -36,13 +37,13 @@ const Navbar = () => {
           <div className="flex gap-2">
             <Link
               href={'/create-todo'}
-              className="rounded-full border-2 border-transparent px-4 py-2 text-slate-50 transition hover:border-white hover:text-white"
+              className="rounded-full border-2 border-transparent px-4 py-2 text-slate-100 transition hover:border-purple-400/30 hover:text-white"
             >
               Create Todo
             </Link>
             <button
               href={'/create-todo'}
-              className="rounded-full border-2 border-transparent px-4 py-2 text-slate-50 transition hover:border-white hover:text-white"
+              className="rounded-full border-2 border-transparent px-4 py-2 text-slate-100 transition hover:border-purple-400/30 hover:text-white"
               onClick={signOut}
             >
               Sign Out
@@ -53,7 +54,7 @@ const Navbar = () => {
                 alt="logo"
                 width={48}
                 height={48}
-                className="rounded-full p-2 transition hover:bg-white/50"
+                className="rounded-full p-2 transition hover:bg-purple-400/20"
               />
             </Link>
           </div>

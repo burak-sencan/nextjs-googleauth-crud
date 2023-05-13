@@ -17,50 +17,25 @@
   pointer-events: none;
 }
 
-.main:before {
-  position: absolute;
-  content: '';
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
-
-.main:after {
-  content: '';
-  background-image: url('/assets/images/grid.svg');
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  opacity: 0.4;
-  filter: invert(1);
-}
-
 .gradient {
   height: fit-content;
   z-index: 3;
   width: 100%;
   max-width: 70vw;
   max-height: 70vh;
-  background-image: radial-gradient(
-      at 27% 37%,
-      rgb(255, 255, 255) 0px,
-      transparent 0%
-    ),
-    radial-gradient(at 40% 20%, #3f51b5 10px, transparent 80%),
+  background-image: radial-gradient(at 50% 50%, #000 0px, transparent 50%),
+    radial-gradient(at 40% 20%, #3f51b5 100px, transparent 80%),
     radial-gradient(at 50% 80%, #009688 20px, transparent 50%),
     radial-gradient(at 10% 20%, #ff5722 0px, transparent 50%),
     radial-gradient(at 60% 63%, #9c27b0 100px, transparent 30%),
-    /* radial-gradient(at 97% 21%, #ffeb3b 0px, transparent 50%), */
-      radial-gradient(at 75% 100%, #e91e63 0px, transparent 50%);
+    radial-gradient(at 90% 10%, #ffeb3b 00px, transparent 30%),
+    radial-gradient(at 75% 100%, #e91e63 0px, transparent 50%);
   position: absolute;
   content: '';
   width: 100%;
   height: 100%;
-  filter: blur(100px) saturate(150%);
-  top: 4rem;
+  filter: blur(100px) saturate(250%);
+  top: 6rem;
   opacity: 0.7;
   background-blend-mode: screen;
 }
@@ -96,16 +71,4 @@
 
 .flex-center {
   @apply flex items-center justify-center;
-}
-
-.flex-start {
-  @apply flex items-start justify-start;
-}
-
-.flex-end {
-  @apply flex items-center justify-end;
-}
-
-.flex-between {
-  @apply flex items-center justify-between;
 }
