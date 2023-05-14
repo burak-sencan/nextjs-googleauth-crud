@@ -4,9 +4,11 @@ import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 const CreateTodo = () => {
-  const { data: session } = useSession()
   const router = useRouter()
+  const { data: session } = useSession()
+
   const [submitting, setSubmitting] = useState(false)
+
   const [todo, setTodo] = useState({
     title: '',
     todo: '',

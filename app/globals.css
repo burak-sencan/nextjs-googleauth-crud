@@ -66,6 +66,17 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll-hide {
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 /* Tailwind Styles */
 
 .app {

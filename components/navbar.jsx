@@ -19,7 +19,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className="sticky top-0 flex h-16 w-full items-center justify-between bg-white/10 px-8 backdrop-blur-sm">
+    <nav className="sticky top-0 z-10 flex h-16 w-full items-center justify-between bg-white/10 px-8 backdrop-blur-sm">
       <Link href={'/'} className="purple_gradient flex items-center gap-2">
         <Image
           src={logo}
